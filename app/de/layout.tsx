@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import "../globals.css";
 
 //german metadata
 export const metadata: Metadata = {
@@ -23,8 +24,10 @@ export default function DeLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <>
+    <html lang="de">
+      <body>
         {children}
-    </>
+      </body>
+    </html>
   );
 }

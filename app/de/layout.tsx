@@ -62,6 +62,9 @@ export default function DeLayout({
 }>) {
   return (
     <html lang="de">
+      <head>
+        <script type="application/ld+json"></script>
+      </head>
       <body>
         {children}
       </body>

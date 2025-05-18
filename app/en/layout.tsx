@@ -69,14 +69,16 @@ export default function RootLayout({
       </head>
       <body className="bg-black">
         <nav className="fixed w-full top-0 left-0">
-          <div className="flex items-center justify-between h-16 w-full px-48">
-            <div className="space-x-8">
-              <a href="/en" className="text-cyan hover:text-cyanL">Home</a>
-              <a href="/en/projects" className="text-purple hover:text-purpleL">Projects</a>
-            </div>
-            <div className="space-x-8">
-              <a href="/en" className="text-cyan hover:text-cyanL">EN</a>
-              <a href="/de" className="text-purple hover:text-purpleL">DE</a>
+          <div className="container mx-auto px-4">
+            <div className="flex items-center justify-between h-16">
+              <div className="space-x-8">
+                <a href="/en" className="text-cyan hover:text-cyanL">Home</a>
+                <a href="/en/projects" className="text-purple hover:text-purpleL">Projects</a>
+              </div>
+              <div className="space-x-8">
+                <a href="/en" className="text-cyan hover:text-cyanL">EN</a>
+                <a href="/de" className="text-purple hover:text-purpleL">DE</a>
+              </div>
             </div>
           </div>
         </nav>

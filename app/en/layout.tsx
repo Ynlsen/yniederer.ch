@@ -68,7 +68,7 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-black">
-        <nav className="fixed w-full top-0 left-0">
+        <nav className="fixed w-full top-0 left-0 border-b border-cyan/20">
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-between h-16">
               <div className="space-x-8">

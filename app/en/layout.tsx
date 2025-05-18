@@ -75,8 +75,9 @@ export default function RootLayout({
                 <a href="/en" className="text-cyan hover:text-cyanL">Home</a>
                 <a href="/en/projects" className="text-purple hover:text-purpleL">Projects</a>
               </div>
-              <div className="space-x-8">
+              <div className="flex items-center space-x-4">
                 <a href="/en" className="text-cyan hover:text-cyanL">EN</a>
+                <div className="h-4 w-px bg-cyan/30"></div>
                 <a href="/de" className="text-purple hover:text-purpleL">DE</a>
               </div>
             </div>

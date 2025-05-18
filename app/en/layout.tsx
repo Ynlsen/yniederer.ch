@@ -69,7 +69,7 @@ export default function RootLayout({
       </head>
       <body className="bg-black">
         <nav className="fixed w-full top-0 left-0">
-          <div className="flex items-center justify-between px-4 h-16">
+          <div className="flex items-center justify-between h-16 max-w-7xl mx-auto">
             <div className="space-x-8">
               <a href="/en" className="text-cyan hover:text-cyanL">Home</a>
               <a href="/en/projects" className="text-purple hover:text-purpleL">Projects</a>

@@ -67,7 +67,19 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
         />
       </head>
-      <body>
+      <body className="bg-black">
+        <nav className="">
+          <div className="flex justify-between px-4">
+            <div className="space-x-8">
+              <a href="/en" className="text-cyan hover:text-cyanL">Home</a>
+              <a href="/en/projects" className="text-purple hover:text-purpleL">Projects</a>
+            </div>
+            <div className="space-x-4">
+              <a href="/en" className="text-cyan hover:text-cyanL">EN</a>
+              <a href="/de" className="text-purple hover:text-purpleL">DE</a>
+            </div>
+          </div>
+        </nav>
         {children}
       </body>
     </html>

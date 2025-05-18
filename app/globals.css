@@ -1,1 +1,8 @@
 @import "tailwindcss";
+
+@theme {
+    --color-cyan: oklch(0.789 0.154 211.53);
+    --color-cyanL: oklch(0.917 0.08 205.041);
+    --color-purple: oklch(0.627 0.265 303.9);
+    --color-purpleL: oklch(0.827 0.119 306.383);
+}

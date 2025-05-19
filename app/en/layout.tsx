@@ -68,7 +68,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
         />
       </head>
-      <body className="bg-black">
+      <body className="bg-black overflow-hidden">
         <Navbar></Navbar>
         {children}
       </body>

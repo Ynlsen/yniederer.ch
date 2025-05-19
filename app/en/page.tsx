@@ -30,14 +30,6 @@ export default function HomePage() {
           Projects
         </a>
       </div>
-
-
-
-      <div>
-        <a href="https://github.com/Ynlsen" className="text-white hover:underline">
-          <h1 className="text-4xl font-bold">Work in Progress</h1>
-        </a>
-      </div>
     </main>
   );
 }

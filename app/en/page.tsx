@@ -2,8 +2,8 @@ export default function HomePage() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center">
       <div className="relative w-64 h-64 mb-12">
-      <div className="absolute -inset-3 bg-gradient-to-r from-cyan to-purple opacity-30 rounded-full blur animate-pulse"></div>
-        <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan/50 to-purple/50 rounded-full"></div>
+      <div className="absolute -inset-3 bg-gradient-to-r from-cyan via-purple to-cyan opacity-30 rounded-full blur animate-pulse"></div>
+        <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan via-purple to-cyan opacity-50 rounded-full"></div>
         <img
           src="/avatar.jpg"
           alt="Yannick Niederer"
@@ -12,7 +12,7 @@ export default function HomePage() {
       </div>
 
       <div className="space-y-6 text-center">
-        <h1 className="text-5xl font-bold mx-auto bg-gradient-to-r from-cyan to-purple text-transparent bg-clip-text">
+        <h1 className="text-5xl font-bold mx-auto bg-gradient-to-r from-cyan via-purple to-cyan text-transparent bg-clip-text">
           Welcome to My Website
         </h1>
         <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">

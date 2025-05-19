@@ -1,11 +1,12 @@
 export default function HomePage() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center">
-      <div className="w-64 h-64 mb-12">
+      <div className="relative w-64 h-64 mb-12">
+        <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan to-purple rounded-full"></div>
         <img
           src="/avatar.jpg"
           alt="Yannick Niederer"
-          className="w-full h-full rounded-full"
+          className="relative w-full h-full rounded-full"
         />
       </div>
 

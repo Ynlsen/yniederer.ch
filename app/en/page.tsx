@@ -8,6 +8,16 @@ export default function HomePage() {
           className="w-full h-full rounded-full"
         />
       </div>
+
+      <div>
+        <h1 className="text-5xl text-cyan">
+          Welcome to My Website
+        </h1>
+      </div>
+
+
+
+
       <div>
         <a href="https://github.com/Ynlsen" className="text-white hover:underline">
           <h1 className="text-4xl font-bold">Work in Progress</h1>

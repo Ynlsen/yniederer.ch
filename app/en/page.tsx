@@ -9,7 +9,7 @@ export default function HomePage() {
         />
       </div>
 
-      <div className="space-y-6 text-center">
+      <div className="space-y-6 text-center mb-12">
         <h1 className="text-5xl font-bold mx-auto bg-gradient-to-r from-cyan to-purple text-transparent bg-clip-text">
           Welcome to My Website
         </h1>
@@ -19,6 +19,17 @@ export default function HomePage() {
         </p>
       </div>
 
+      <div className="space-x-6">
+        <a href="https://github.com/Ynlsen" className="px-6 py-3 border-2 border-cyan text-cyan hover:bg-cyan hover:text-black relative">
+          GitHub
+        </a>
+        <a href="/contact" className="px-6 py-3 border-2 border-purple text-purple hover:bg-purple hover:text-black relative">
+          Contact
+        </a>
+        <a href="/projects" className="px-6 py-3 border-2 border-cyan text-cyan hover:bg-cyan hover:text-black relative">
+          Projects
+        </a>
+      </div>
 
 
 

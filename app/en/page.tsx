@@ -25,10 +25,10 @@ export default function HomePage() {
         <a href="https://github.com/Ynlsen" className="px-6 py-3 border-2 border-cyan text-cyan hover:bg-cyan hover:text-black relative">
           GitHub
         </a>
-        <a href="/contact" className="px-6 py-3 border-2 border-purple text-purple hover:bg-purple hover:text-black relative">
+        <a href="/en/contact" className="px-6 py-3 border-2 border-purple text-purple hover:bg-purple hover:text-black relative">
           Contact
         </a>
-        <a href="/projects" className="px-6 py-3 border-2 border-cyan text-cyan hover:bg-cyan hover:text-black relative">
+        <a href="/en/projects" className="px-6 py-3 border-2 border-cyan text-cyan hover:bg-cyan hover:text-black relative">
           Projects
         </a>
       </div>

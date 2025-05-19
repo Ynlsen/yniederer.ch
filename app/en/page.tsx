@@ -10,9 +10,12 @@ export default function HomePage() {
       </div>
 
       <div>
-        <h1 className="text-5xl text-cyan">
+        <h1 className="text-5xl font-bold bg-gradient-to-r from-cyan to-purple text-transparent bg-clip-text">
           Welcome to My Website
         </h1>
+        <p className="text-xl text-white max-w-2xl">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+        </p>
       </div>
 
 

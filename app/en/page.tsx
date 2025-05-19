@@ -5,6 +5,8 @@ export default function HomePage() {
       <div className="absolute -top-1/4 -left-1/4 w-1/2 h-1/2 bg-cyan/7 rounded-full blur-[100px] animate-[pulse_10s_ease_infinite]"></div>
       <div className="absolute -bottom-1/4 -right-1/4 w-1/2 h-1/2 bg-purple/7 rounded-full blur-[100px] animate-[pulse_10s_ease_infinite]"></div>
       
+      <div className="absolute inset-0 bg-gradient-to-br from-cyan/3 via-transparent to-purple/3"></div>
+
 
       <div className="relative w-64 h-64 mb-12 mt-10">
         <div className="absolute -inset-3 bg-gradient-to-r from-cyan via-purple to-cyan opacity-30 rounded-full blur animate-pulse"></div>

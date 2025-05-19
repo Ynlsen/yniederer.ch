@@ -8,7 +8,7 @@ export default function Navbar() {
   const localPath = pathname.replace("/de", "").replace("/en", "");
 
   return (
-    <nav className="fixed w-full top-0 left-0 border-b border-cyan/20">
+    <nav className="fixed w-full top-0 left-0 border-b border-cyan/20 bg-black/80 backdrop-blur-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="space-x-8">

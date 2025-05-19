@@ -9,12 +9,13 @@ export default function HomePage() {
         />
       </div>
 
-      <div>
-        <h1 className="text-5xl font-bold bg-gradient-to-r from-cyan to-purple text-transparent bg-clip-text">
+      <div className="space-y-6 text-center">
+        <h1 className="text-5xl font-bold mx-auto bg-gradient-to-r from-cyan to-purple text-transparent bg-clip-text">
           Welcome to My Website
         </h1>
-        <p className="text-xl text-white max-w-2xl">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+        <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr sed. 
+          Nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
         </p>
       </div>
 

@@ -14,7 +14,7 @@ export default function HomePage() {
       <div className="space-y-6 text-center">
         <h1 className="text-5xl font-bold">
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan via-purple to-cyan">
-            Welcome to My Website
+          Welcome to My Portfolio Website
           </span>
         </h1>
         <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">

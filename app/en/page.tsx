@@ -10,7 +10,7 @@ export default function HomePage() {
       <div className="absolute inset-0 bg-gradient-to-br from-cyan/3 via-transparent to-purple/3"></div>
 
 
-      <div className="relative w-64 h-64 mb-12 mt-10">
+      <div className="relative w-64 h-64 mb-12 mt-4">
         <div className="absolute -inset-3 bg-gradient-to-r from-cyan via-purple to-cyan opacity-30 rounded-full blur animate-pulse"></div>
         <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan via-purple to-cyan opacity-50 rounded-full"></div>
         <img

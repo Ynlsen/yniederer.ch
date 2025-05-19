@@ -2,7 +2,7 @@ export default function HomePage() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center">
       <div className="relative w-64 h-64 mb-12">
-      <div className="absolute -inset-3 bg-gradient-to-r from-cyan via-purple to-cyan opacity-30 rounded-full blur animate-pulse"></div>
+        <div className="absolute -inset-3 bg-gradient-to-r from-cyan via-purple to-cyan opacity-30 rounded-full blur animate-pulse"></div>
         <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan via-purple to-cyan opacity-50 rounded-full"></div>
         <img
           src="/avatar.jpg"

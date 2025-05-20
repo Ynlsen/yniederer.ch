@@ -2,12 +2,12 @@ export default function HomePage() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center">
 
-      <div className="absolute -top-1/4 -left-1/4 w-1/2 h-1/2 bg-cyan/10 rounded-full blur-[100px] animate-[pulse_10s_ease_infinite]"></div>
-      <div className="absolute -bottom-1/4 -right-1/4 w-1/2 h-1/2 bg-purple/10 rounded-full blur-[100px] animate-[pulse_10s_ease_infinite]"></div>
+      <div className="absolute -z-10 -top-1/4 -left-1/4 w-1/2 h-1/2 bg-cyan/10 rounded-full blur-[100px] animate-[pulse_10s_ease_infinite]"></div>
+      <div className="absolute -z-10 -bottom-1/4 -right-1/4 w-1/2 h-1/2 bg-purple/10 rounded-full blur-[100px] animate-[pulse_10s_ease_infinite]"></div>
       
-      <div className="absolute w-1/2 h-1/3 bg-gradient-to-r from-cyan via-purple to-cyan opacity-10 rounded-full blur-[100px]"></div>
+      <div className="absolute -z-10 w-1/2 h-1/3 bg-gradient-to-r from-cyan via-purple to-cyan opacity-10 rounded-full blur-[100px]"></div>
 
-      <div className="absolute inset-0 bg-gradient-to-br from-cyan/5 via-transparent to-purple/5"></div>
+      <div className="absolute -z-10 inset-0 bg-gradient-to-br from-cyan/5 via-transparent to-purple/5"></div>
 
 
       <div className="group relative w-64 h-64 mb-12 mt-4">
@@ -27,7 +27,7 @@ export default function HomePage() {
           </span>
         </h1>
         <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-          Hi, I'm <span className="text-cyan">Yannick</span>, a Computer Science bachelor student at ETH Zurich. 
+          Hi, I'm <span className="inline-block text-cyan hover:animate-[ping_1s_ease-in-out_]">Yannick</span>, a Computer Science bachelor student at ETH Zurich. 
           Here you'll find some of my projects.
           Feel free to reach out through the contact page.
         </p>

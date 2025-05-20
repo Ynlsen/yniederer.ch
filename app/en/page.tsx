@@ -23,11 +23,11 @@ export default function HomePage() {
       <div className="space-y-6 text-center">
         <h1 className="text-5xl font-bold">
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan via-purple to-cyan">
-          Welcome to My Portfolio Website
+            Welcome to My Portfolio Website
           </span>
         </h1>
         <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr sed. 
+          Hi, I'm Yannick, lorem ipsum dolor sit amet, consetetur sadipscing elitr sed. 
           Nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
         </p>
       </div>

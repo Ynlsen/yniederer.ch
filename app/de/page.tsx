@@ -27,7 +27,7 @@ export default function DeHomePage() {
           </span>
         </h1>
         <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-          Hallo, ich bin <span className="inline-block text-cyan hover:animate-[ping_1s_ease-in-out_]">Yannick</span>, ein Informatik-Bachelorstudent an der ETH Zürich. 
+          Hallo, ich bin <span className="inline-block text-cyan hover:animate-wiggle">Yannick</span>, ein Informatik-Bachelorstudent an der ETH Zürich. 
           Hier findest du einige meiner Projekte.
           Kontaktiere mich gerne über die Kontaktseite.
         </p>

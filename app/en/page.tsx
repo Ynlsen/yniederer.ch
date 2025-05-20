@@ -27,7 +27,7 @@ export default function HomePage() {
           </span>
         </h1>
         <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-          Hi, I'm <span className="inline-block text-cyan hover:animate-[ping_1s_ease-in-out_]">Yannick</span>, a Computer Science bachelor student at ETH Zurich. 
+          Hi, I'm <span className="inline-block text-cyan hover:animate-wiggle">Yannick</span>, a Computer Science bachelor student at ETH Zurich. 
           Here you'll find some of my projects.
           Feel free to reach out through the contact page.
         </p>

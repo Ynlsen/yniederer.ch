@@ -11,12 +11,12 @@ export default function HomePage() {
 
 
       <div className="group relative w-64 h-64 mb-12 mt-4">
-        <div className="absolute -inset-3 group-hover:scale-110 transition-all duration-200 bg-gradient-to-r from-cyan via-purple to-cyan opacity-30 rounded-full blur animate-pulse group-hover:animate-[pulse_1.5s_infinite]"></div>
-        <div className="absolute -inset-0.5 group-hover:-inset-0.3 bg-gradient-to-r from-cyan via-purple to-cyan opacity-50 group-hover:scale-105 transition-all duration-200 rounded-full"></div>
+        <div className="absolute -inset-3 group-hover:scale-110 transition-all duration-200 ease-in-out bg-gradient-to-r from-cyan via-purple to-cyan opacity-30 rounded-full blur animate-pulse group-hover:animate-[pulse_1.5s_infinite]"></div>
+        <div className="absolute -inset-0.5 group-hover:-inset-0.3 bg-gradient-to-r from-cyan via-purple to-cyan opacity-50 group-hover:scale-105 transition-all duration-200 ease-in-out rounded-full"></div>
         <img
           src="/avatar.jpg"
           alt="Yannick Niederer"
-          className="relative w-full h-full group-hover:scale-105 transition-all duration-200 rounded-full"
+          className="relative w-full h-full group-hover:scale-105 transition-all duration-200 ease-in-out rounded-full"
         />
       </div>
 

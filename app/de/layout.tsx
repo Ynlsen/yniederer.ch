@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Navbar from "./navbar";
 import "../globals.css";
 
 //german metadata
@@ -27,7 +28,7 @@ const personSchema = {
   name: "Yannick Niederer",
   givenName: "Yannick",
   familyName: "Niederer",
-  image: "/avatar.jpg",
+  image: "https://yniederer.ch/avatar.jpg",
   description: "Bachelorstudent der Informatik an der ETH Zürich",
   jobTitle: "Bachelorstudent",
   email: "mailto:yannick.niederer@shinternet.ch",
@@ -52,7 +53,7 @@ const personSchema = {
   knowsLanguage: ["de","en","de-CH"]
 };
 
-export default function DeLayout({
+export default function DeRootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -60,13 +61,14 @@ export default function DeLayout({
   return (
     <html lang="de">
       <head>
-      <script
+        <script
           id="person-jsonld"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
         />
       </head>
-      <body>
+      <body className="bg-black overflow-hidden">
+        <Navbar></Navbar>
         {children}
       </body>
     </html>

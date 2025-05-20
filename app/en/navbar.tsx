@@ -8,8 +8,8 @@ export default function Navbar() {
   const localPath = pathname.replace("/de", "").replace("/en", "");
 
   return (
-    <nav className="fixed w-full top-0 left-0 border-b border-cyan/20 bg-black/80 backdrop-blur-sm z-50">
-      <div className="container mx-auto px-4">
+    <nav className="fixed w-full top-0 left-0 border-b border-cyan/20 bg-black/80 backdrop-blur-sm z-50 flex justify-center items-center">
+      <div className="w-5/6">
         <div className="flex items-center justify-between h-16">
           <div className="space-x-8">
             <a href="/en" className="text-cyan hover:text-cyanL">Home</a>

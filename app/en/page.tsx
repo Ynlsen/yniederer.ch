@@ -33,13 +33,13 @@ export default function HomePage() {
       </div>
 
       <div className="mt-12 flex flex-wrap justify-center space-x-6">
-        <a href="https://github.com/Ynlsen" className="px-6 py-3 border-2 border-cyan text-cyan hover:bg-cyan hover:text-black relative">
+        <a href="https://github.com/Ynlsen" className="px-6 py-3 border-2 border-cyan text-cyan hover:bg-cyan hover:text-black duration-300 relative">
           GitHub
         </a>
-        <a href="/en/contact" className="px-6 py-3 border-2 border-purple text-purple hover:bg-purple hover:text-black relative">
+        <a href="/en/contact" className="px-6 py-3 border-2 border-purple text-purple hover:bg-purple hover:text-black duration-300 relative">
           Contact
         </a>
-        <a href="/en/projects" className="px-6 py-3 border-2 border-cyan text-cyan hover:bg-cyan hover:text-black relative">
+        <a href="/en/projects" className="px-6 py-3 border-2 border-cyan text-cyan hover:bg-cyan hover:text-black duration-300 relative">
           Projects
         </a>
       </div>

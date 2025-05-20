@@ -14,6 +14,7 @@ export default function Navbar() {
           <div className="space-x-8">
             <a href="/en" className="text-cyan hover:text-cyanL">Home</a>
             <a href="/en/projects" className="text-purple hover:text-purpleL">Projects</a>
+            <a href="/en/contact" className="text-cyan hover:text-cyanL">Contact</a>
           </div>
           <div className="flex items-center space-x-4">
             <a href={"/en" + localPath} className="text-cyan hover:text-cyanL">EN</a>

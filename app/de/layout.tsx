@@ -86,6 +86,9 @@ export default function DeRootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(Schema) }}
         />
+        <link rel="canonical" href="https://yniederer.ch/de/" />
+        <link rel="alternate" hrefLang="de" href="https://yniederer.ch/de/" />
+        <link rel="alternate" hrefLang="en" href="https://yniederer.ch/en/" />
       </head>
       <body className="bg-black overflow-hidden">
         <Navbar></Navbar>

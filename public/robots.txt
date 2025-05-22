@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://yniederer.ch
+
+# Sitemaps
+Sitemap: https://yniederer.ch/sitemap.xml

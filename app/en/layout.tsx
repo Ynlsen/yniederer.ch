@@ -81,6 +81,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
         <script
           id="person-jsonld"
           type="application/ld+json"
@@ -90,7 +91,7 @@ export default function RootLayout({
         <link rel="alternate" hrefLang="de" href="https://yniederer.ch/de/" />
         <link rel="alternate" hrefLang="en" href="https://yniederer.ch/en/" />
       </head>
-      <body className="bg-black overflow-hidden">
+      <body className="bg-black overflow-x-hidden">
         <Navbar></Navbar>
         {children}
       </body>

@@ -33,20 +33,20 @@ export default function ContactPage() {
         </a>        
       </div>
 
-      <form>
+      <form className="space-y-6">
         <div>
           <label className="text-gray-300">Name</label>
-          <input type="text" className="w-full border-2 border-cyan"/>
+          <input type="text" className="w-full px-4 py-2 bg-black border-2 border-cyan text-white"/>
         </div>
         <div>
           <label className="text-gray-300">Email</label>
-          <input type="text" className="w-full border-2 border-cyan"/>          
+          <input type="text" className="w-full px-4 py-2 bg-black border-2 border-cyan text-white"/>          
         </div>
         <div>
           <label className="text-gray-300">Message</label>
-          <input type="text" className="w-full border-2 border-cyan"/>          
+          <input type="text" className="w-full px-4 py-2 bg-black border-2 border-cyan text-white"/>          
         </div>
-        <button className="w-full border-2 border-purple text-purple">Send Message</button>
+        <button className="w-full px-6 py-3 border-2 border-purple text-purple">Send Message</button>
       </form>
     </main>
   );

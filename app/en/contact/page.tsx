@@ -26,7 +26,7 @@ export default function ContactPage() {
           GitHub
         </a>
         <a href="mailto:yannick.niederer@shinternet.ch" className="px-6 py-3 border-2 border-purple text-purple hover:bg-purple hover:text-black duration-300 relative">
-          E-Mail
+          Email
         </a>
         <a href="https://www.linkedin.com/in/yannick-niederer/?locale=en_US" className="px-6 py-3 border-2 border-cyan text-cyan hover:bg-cyan hover:text-black duration-300 relative">
           LinkedIn
@@ -34,10 +34,19 @@ export default function ContactPage() {
       </div>
 
       <form>
-        <input type="text"/>
-        <input type="text"/>
-        <input type="text"/>
-        <button></button>
+        <div>
+          <label className="text-gray-300">Name</label>
+          <input type="text" className="w-full border-2 border-cyan"/>
+        </div>
+        <div>
+          <label className="text-gray-300">Email</label>
+          <input type="text" className="w-full border-2 border-cyan"/>          
+        </div>
+        <div>
+          <label className="text-gray-300">Message</label>
+          <input type="text" className="w-full border-2 border-cyan"/>          
+        </div>
+        <button className="w-full border-2 border-purple text-purple">Send Message</button>
       </form>
     </main>
   );

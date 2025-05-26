@@ -33,6 +33,12 @@ export default function ContactPage() {
         </a>        
       </div>
 
+      <form>
+        <input type="text"/>
+        <input type="text"/>
+        <input type="text"/>
+        <button></button>
+      </form>
     </main>
   );
 } 

@@ -36,17 +36,23 @@ export default function ContactPage() {
       <form className="space-y-6 w-full max-w-2xl px-4">
         <div>
           <label className="block text-gray-300 text-sm mb-2">Name</label>
-          <input type="text" className="w-full px-4 py-2 bg-black border-2 border-cyan/50 hover:border-cyan/70 focus:border-cyan rounded-lg text-white focus:outline-none"/>
+          <input type="text" className="w-full px-4 py-2 bg-black border-2 border-cyan/50 hover:border-cyan/70 focus:border-cyan rounded-lg text-white focus:outline-none"
+                 placeholder="First & last name"
+          />
         </div>
         <div>
           <label className="block text-gray-300 text-sm mb-2">Email</label>
-          <input type="text" className="w-full px-4 py-2 bg-black border-2 border-cyan/50 hover:border-cyan/70 focus:border-cyan rounded-lg text-white focus:outline-none"/>          
+          <input type="text" className="w-full px-4 py-2 bg-black border-2 border-cyan/50 hover:border-cyan/70 focus:border-cyan rounded-lg text-white focus:outline-none"
+                 placeholder="email@example.com"          
+          />          
         </div>
         <div>
           <label className="block text-gray-300 text-sm mb-2">Message</label>
-          <textarea rows={4} className="w-full px-4 py-2 bg-black border-2 border-cyan/50 hover:border-cyan/70 focus:border-cyan rounded-lg text-white focus:outline-none"/>          
+          <textarea rows={4} className="w-full px-4 py-2 bg-black border-2 border-cyan/50 hover:border-cyan/70 focus:border-cyan rounded-lg text-white focus:outline-none"
+                 placeholder="Your massage here..."          
+          />          
         </div>
-        <button className="w-full px-6 py-3 border-2 border-purple text-purple">Send Message</button>
+        <button className="w-full px-6 py-3 border-2 border-purple text-purple hover:bg-purple hover:text-black duration-300">Send Message</button>
       </form>
     </main>
   );

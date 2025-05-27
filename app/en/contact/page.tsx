@@ -60,7 +60,7 @@ export default function ContactPage() {
         </div>
         <div>
           <label htmlFor="email" className="block text-gray-300 text-sm mb-2">Email</label>
-          <input type="text" className="w-full px-4 py-2 bg-black border-2 border-cyan/50 hover:border-cyan/70 focus:border-cyan rounded-lg text-white focus:outline-none"
+          <input type="email" className="w-full px-4 py-2 bg-black border-2 border-cyan/50 hover:border-cyan/70 focus:border-cyan rounded-lg text-white focus:outline-none"
                  placeholder="email@example.com"
                  id="email"
                  name="email"
@@ -68,11 +68,11 @@ export default function ContactPage() {
           />          
         </div>
         <div>
-          <label htmlFor="massage" className="block text-gray-300 text-sm mb-2">Message</label>
+          <label htmlFor="message" className="block text-gray-300 text-sm mb-2">Message</label>
           <textarea rows={4} className="w-full px-4 py-2 bg-black border-2 border-cyan/50 hover:border-cyan/70 focus:border-cyan rounded-lg text-white focus:outline-none"
-                    placeholder="Your massage here..."
-                    id="massage"
-                    name="massage"
+                    placeholder="Your message here..."
+                    id="message"
+                    name="message"
                     required                            
           />          
         </div>

@@ -7,15 +7,19 @@ export default function ContactPage() {
 
     const data = new FormData(e.currentTarget);
 
-    await fetch('/api/contact', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        name: data.get('name'),
-        email: data.get('email'),
-        message: data.get('message'),
-      }),
-    });
+    try {
+      await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: data.get('name'),
+          email: data.get('email'),
+          message: data.get('message'),
+        }),
+      });
+    } catch (err) {
+      console.error('Contact form error:', err);
+    }
 
   }
 

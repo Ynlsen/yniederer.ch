@@ -1,9 +1,12 @@
-import { FormEvent } from "react";
+"use client"
+import { FormEvent, useState } from "react";
 
 export default function ContactPage() {
+  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
 
   const submit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setStatus('submitting');
 
     const data = new FormData(e.currentTarget);
 
@@ -24,11 +27,12 @@ export default function ContactPage() {
         throw new Error(result.error || 'Unknown');
       }
 
+      setStatus('success');
     } catch (err) {
       console.error('Contact form error:', err);
+      setStatus('error');
     }
-
-  }
+  };
 
   return (
     <main className="min-h-screen flex flex-col items-center justify-center py-20">
@@ -107,7 +111,7 @@ export default function ContactPage() {
                     required                            
           />          
         </div>
-        <button type="submit" className="w-full px-6 py-3 border-2 border-purple text-purple hover:bg-purple hover:text-black duration-300">Send Message</button>
+        <button type="submit" disabled={status === 'submitting'} className="w-full px-6 py-3 border-2 border-purple text-purple hover:bg-purple hover:text-black duration-300">Send Message</button>
       </form>
     </main>
   );

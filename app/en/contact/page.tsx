@@ -18,8 +18,10 @@ export default function ContactPage() {
         }),
       });
 
+      const result = await res.json();
+
       if(!res.ok){
-        throw new Error('Unknown');
+        throw new Error(result.error || 'Unknown');
       }
 
     } catch (err) {

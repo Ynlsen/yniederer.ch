@@ -111,8 +111,4 @@ export default function ContactPage() {
       </form>
     </main>
   );
-} 
-
-function async(e: any) {
-  throw new Error("Function not implemented.");
 }

@@ -25,4 +25,16 @@ export async function POST(req: NextRequest) {
       ],
     }),
   });
+
+  if(res.ok){
+    return NextResponse.json(
+      { success: true },
+      { status: 200 }
+    );
+  }else{
+    return NextResponse.json(
+      { success: false, error: 'Discord API error' }, 
+      { status: 502 }
+    );
+  }
 }

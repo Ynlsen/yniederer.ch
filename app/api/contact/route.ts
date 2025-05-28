@@ -1,9 +1,16 @@
-import { NextRequest } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(req: NextRequest) {
   const { name, email, message } = await req.json();
 
   const url = process.env.DISCORD_WEBHOOK_URL;
+
+  if(!url){
+    return NextResponse.json(
+      { success: false, error: 'Webhook not configured' }, 
+      { status: 500 }
+    );
+  } 
     
   const res = await fetch(url, {
     method: 'POST',

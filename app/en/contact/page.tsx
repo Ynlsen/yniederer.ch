@@ -8,7 +8,7 @@ export default function ContactPage() {
     const data = new FormData(e.currentTarget);
 
     try {
-      await fetch('/api/contact', {
+      const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -17,6 +17,11 @@ export default function ContactPage() {
           message: data.get('message'),
         }),
       });
+
+      if(!res.ok){
+        throw new Error('Unknown');
+      }
+
     } catch (err) {
       console.error('Contact form error:', err);
     }

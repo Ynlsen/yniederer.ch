@@ -1,4 +1,24 @@
+import { FormEvent } from "react";
+
 export default function ContactPage() {
+
+  const submit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const data = new FormData(e.currentTarget);
+
+    await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: data.get('name'),
+        email: data.get('email'),
+        message: data.get('message'),
+      }),
+    });
+
+  }
+
   return (
     <main className="min-h-screen flex flex-col items-center justify-center py-20">
 
@@ -48,7 +68,7 @@ export default function ContactPage() {
         </a>        
       </div>
 
-      <form className="space-y-6 w-full max-w-2xl px-4">
+      <form onSubmit={submit} className="space-y-6 w-full max-w-2xl px-4">
         <div>
           <label htmlFor="name" className="block text-gray-300 text-sm mb-2">Name</label>
           <input type="text" className="w-full px-4 py-2 bg-black border-2 border-cyan/50 hover:border-cyan/70 focus:border-cyan rounded-lg text-white focus:outline-none"
@@ -81,3 +101,7 @@ export default function ContactPage() {
     </main>
   );
 } 
+
+function async(e: any) {
+  throw new Error("Function not implemented.");
+}

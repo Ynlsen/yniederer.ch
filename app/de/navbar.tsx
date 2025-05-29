@@ -12,14 +12,14 @@ export default function DeNavbar() {
       <div className="w-11/12 sm:w-5/6">
         <div className="flex items-center justify-between h-16">
           <div className="space-x-4 sm:space-x-8 text-sm sm:text-base">
-            <a href="/de" className="text-cyan hover:text-cyanL">Startseite</a>
-            <a href="/de/projects" className="text-purple hover:text-purpleL">Projekte</a>
-            <a href="/de/contact" className="text-cyan hover:text-cyanL">Kontakt</a>
+            <a href="https://yniederer.ch/de" className="text-cyan hover:text-cyanL">Startseite</a>
+            <a href="https://yniederer.ch/de/projects" className="text-purple hover:text-purpleL">Projekte</a>
+            <a href="https://yniederer.ch/de/contact" className="text-cyan hover:text-cyanL">Kontakt</a>
           </div>
           <div className="flex items-center space-x-2 sm:space-x-4 text-sm sm:text-base">
-            <a href={"/en" + localPath} className="text-cyan hover:text-cyanL">EN</a>
+            <a href={"https://yniederer.ch/en" + localPath} className="text-cyan hover:text-cyanL">EN</a>
             <div className="h-4 w-px bg-cyan/30"></div>
-            <a href={"/de" + localPath} className="text-purple hover:text-purpleL">DE</a>
+            <a href={"https://yniederer.ch/de" + localPath} className="text-purple hover:text-purpleL">DE</a>
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import { redirect } from "next/navigation";
+import { permanentRedirect } from 'next/navigation'
 import { headers } from "next/headers";
 
 export default async function LandingPage() {
@@ -11,5 +11,5 @@ export default async function LandingPage() {
     const supported = ["en", "de"];
     const locale = supported.includes(preferred) ? preferred : "en";
 
-    redirect(`/${locale}`);     
+    permanentRedirect(`/${locale}`);     
 }

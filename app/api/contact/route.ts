@@ -1,9 +1,27 @@
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(req: NextRequest) {
-  const { name, email, message } = await req.json();
+  const { name, email, message, token } = await req.json();
 
   const url = process.env.DISCORD_WEBHOOK_URL;
+
+  const secret = process.env.RECAPTCHA_SECRET_KEY!;
+
+  const res = await fetch(
+    'https://www.google.com/recaptcha/api/siteverify', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({ secret, response: token })
+    }
+  );
+
+  const result = await res.json();
+  
+  if (!result.success) {
+    return NextResponse.json(
+      { success: false, error: 'Captcha failed' },
+      { status: 400 });
+  }
 
   if(!url){
     return NextResponse.json(

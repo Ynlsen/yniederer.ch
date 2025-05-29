@@ -121,7 +121,7 @@ export default function ContactPage() {
           />          
         </div>
 
-        <ReCAPTCHA
+        <ReCAPTCHA className="opacity-20 hover:opacity-100"
           ref={recaptchaRef}
           size="invisible"
           // PUBLIC SITE KEY

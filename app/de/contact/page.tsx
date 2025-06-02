@@ -105,7 +105,7 @@ export default function DeContactPage() {
         <div>
           <label htmlFor="email" className="block text-gray-300 text-sm mb-2">Email</label>
           <input type="email" className="w-full px-4 py-2 bg-black border-2 border-cyan/50 hover:border-cyan/70 focus:border-cyan rounded-lg text-white focus:outline-none"
-                 placeholder="email@example.com"
+                 placeholder="email@beispiel.com"
                  id="email"
                  name="email"
                  required                           

@@ -25,18 +25,18 @@ export default function ProjectsPage() {
 
         <div className="flex flex-col space-y-8">
           <div className="w-full">
-            <a href="en/projects/server" className="block w-full bg-gray-700">
+            <a href="en/projects/server" className="block w-full bg-gray-700 border-2 border-gray-500 rounded-2xl">
               <div className="p-4 text-white">
-                <h3>Server</h3>
+                <h2 className="text-2xl font-semibold mb-2">Server</h2>
                 <p>My home server hosting a lot of cool stuff</p>
                 read more --
               </div>
             </a>
           </div>
           <div className="w-full">
-            <a href="en/projects/server" className="block w-full bg-gray-700">
+            <a href="en/projects/server" className="block w-full bg-gray-700 border-2 border-gray-500 rounded-2xl">
               <div className="p-4 text-white">
-                <h3>Server 2</h3>
+                <h2 className="text-2xl font-semibold mb-2">Server 2</h2>
                 <p>My better home server now hosting a lot more cool stuff</p>
                 read more --
               </div>

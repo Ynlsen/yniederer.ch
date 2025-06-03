@@ -19,7 +19,7 @@ function ProjectItem({title, description, href, isLeft}: ItemPara) {
     <div className="relative flex w-full">
       <div className={`group w-1/2 ${order}`}>
         <div className={`absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-black ring-8  ${dotColor} group-hover:ring-0 group-hover:w-10 group-hover:h-10 duration-300 rounded-full`} />
-        <a href={href} className={`block w-full bg-gray-600/60 border-2 ${borderColor} duration-300   rounded-2xl`}>
+        <a href={href} className={`block w-full bg-gray-800/80 border-2 ${borderColor} duration-300   rounded-2xl`}>
           <div className="relative w-full h-48 overflow-hidden">
             <img 
               src="/server.jpg" 
@@ -76,6 +76,22 @@ export default function ProjectsPage() {
           <ProjectItem title="server" description="coll stuff" href="/en/projects/server" isLeft={true} />
           <ProjectItem title="server" description="coll stuff" href="/en/projects/server" isLeft={false} />
           <ProjectItem title="server" description="coll stuff" href="/en/projects/server" isLeft={true} />
+        
+          <div className="relative w-full flex justify-center pt-10">
+            <div className="max-w-md w-1/2 bg-gray-800/80 backdrop-blur-3xl border-2 border-gray-600/50 rounded-2xl p-6 text-center">
+              <p className="text-gray-300 mb-4">
+                More projects coming soon... <br/>
+                For now, check out my GitHub for more repos:
+              </p>
+              <a
+                href="https://github.com/Ynlsen"
+                className="inline-block px-6 py-2.25 border-2 text-sm font-medium rounded-full border-purple text-purple hover:bg-purple hover:text-black duration-300"
+              >
+                To my GitHub →
+              </a>
+            </div>  
+          </div>
+        
         </div>
 
       </div>

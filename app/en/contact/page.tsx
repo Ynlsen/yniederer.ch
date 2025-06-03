@@ -140,7 +140,7 @@ export default function ContactPage() {
           </div>
         )}
 
-        <button type="submit" disabled={status === 'submitting'} className="w-full px-6 py-3 border-2 border-purple text-purple hover:bg-purple hover:text-black duration-300">Send Message</button>
+        <button type="submit" disabled={status === 'submitting'} className="w-full px-6 py-3 border-2 border-purple text-purple hover:bg-purple hover:text-black duration-300 disabled:opacity-50">{status === 'submitting' ? 'Sending message...' : 'Send Message'}</button>
       </form>
     </main>
   );

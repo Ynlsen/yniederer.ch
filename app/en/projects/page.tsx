@@ -1,3 +1,24 @@
+
+
+function ProjectItem() {
+  return(
+    <div className="w-full">
+     <a href="en/projects/server" className="block w-full bg-gray-700 border-2 border-gray-500 rounded-2xl">
+       <div className="p-4 text-white">
+         <h2 className="text-2xl font-semibold mb-2">Server</h2>
+         <p>My home server hosting a lot of cool stuff</p>
+         read more --
+       </div>
+     </a>
+   </div>    
+  )
+}
+
+
+
+
+
+
 export default function ProjectsPage() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center py-20">
@@ -24,24 +45,9 @@ export default function ProjectsPage() {
       
 
         <div className="flex flex-col space-y-8">
-          <div className="w-full">
-            <a href="en/projects/server" className="block w-full bg-gray-700 border-2 border-gray-500 rounded-2xl">
-              <div className="p-4 text-white">
-                <h2 className="text-2xl font-semibold mb-2">Server</h2>
-                <p>My home server hosting a lot of cool stuff</p>
-                read more --
-              </div>
-            </a>
-          </div>
-          <div className="w-full">
-            <a href="en/projects/server" className="block w-full bg-gray-700 border-2 border-gray-500 rounded-2xl">
-              <div className="p-4 text-white">
-                <h2 className="text-2xl font-semibold mb-2">Server 2</h2>
-                <p>My better home server now hosting a lot more cool stuff</p>
-                read more --
-              </div>
-            </a>
-          </div>
+          <ProjectItem/>
+          <ProjectItem/>
+          <ProjectItem/>
         </div>
 
       </div>

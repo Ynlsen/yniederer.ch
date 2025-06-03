@@ -8,11 +8,14 @@ function ProjectItem({title, description, href}: ItemPara) {
   return(
     <div className="w-full">
      <a href={href} className="block w-full bg-gray-700 border-2 border-gray-500 rounded-2xl">
-       <div className="p-4 text-white">
+      <div className="w-full h-48 overflow-hidden">
+        <img src="/avatar.jpg" alt="TODO" className="w-full h-full object-cover rounded-t-2xl"/>
+      </div>
+      <div className="p-4 text-white">
          <h2 className="text-2xl font-semibold mb-2">{title}</h2>
          <p>{description}</p>
          read more --
-       </div>
+      </div>
      </a>
    </div>    
   )

@@ -19,6 +19,32 @@ export default function ProjectsPage() {
           Scroll to discover.
         </p>
       </div>
+
+      <div className="relative w-full max-w-3xl">
+      
+
+        <div className="flex flex-col space-y-8">
+          <div className="w-full">
+            <a href="en/projects/server" className="block w-full bg-gray-700">
+              <div className="p-4 text-white">
+                <h3>Server</h3>
+                <p>My home server hosting a lot of cool stuff</p>
+                read more --
+              </div>
+            </a>
+          </div>
+          <div className="w-full">
+            <a href="en/projects/server" className="block w-full bg-gray-700">
+              <div className="p-4 text-white">
+                <h3>Server 2</h3>
+                <p>My better home server now hosting a lot more cool stuff</p>
+                read more --
+              </div>
+            </a>
+          </div>
+        </div>
+
+      </div>
     </main>
   );
 } 

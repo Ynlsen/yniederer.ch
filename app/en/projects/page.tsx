@@ -2,29 +2,36 @@ type ItemPara = {
   title: string
   description: string
   href: string
+  isLeft: boolean
 }
 
-function ProjectItem({title, description, href}: ItemPara) {
+function ProjectItem({title, description, href, isLeft}: ItemPara) {
+
+  const order = isLeft ? "order-first pr-8" : "order-last pl-8"
+
   return(
-    <div className="w-full">
-     <a href={href} className="block w-full bg-gray-700 border-2 border-gray-500 rounded-2xl">
-      <div className="relative w-full h-48 overflow-hidden">
-        <img 
-          src="/avatar.jpg" 
-          alt={`${title} thumbnail`} 
-          className="absolute w-full h-full object-cover rounded-t-2xl"
-        />
-        <div className="absolute w-full h-full bg-gradient-to-t from-black/70 to-transparent"/>
+    <div className="flex w-full">
+      <div className={`w-1/2 ${order}`}>
+        <a href={href} className="block w-full bg-gray-700 border-2 border-gray-500 rounded-2xl">
+          <div className="relative w-full h-48 overflow-hidden">
+            <img 
+              src="/avatar.jpg" 
+              alt={`${title} thumbnail`} 
+              className="absolute w-full h-full object-cover rounded-t-2xl"
+            />
+            <div className="absolute w-full h-full bg-gradient-to-t from-black/70 to-transparent"/>
+          </div>
+          <div className="p-5">
+            <h2 className="text-2xl font-semibold text-white mb-2">{title}</h2>
+            <p className="text-gray-300 text-sm mb-3">{description}</p>
+            <span className="inline-block px-4 py-1.5 text-sm font-medium rounded-full border-2">
+                Read more →
+            </span>
+          </div>
+        </a>
       </div>
-      <div className="p-5">
-         <h2 className="text-2xl font-semibold text-white mb-2">{title}</h2>
-         <p className="text-gray-300 text-sm mb-3">{description}</p>
-         <span className="inline-block px-4 py-1.5 text-sm font-medium rounded-full border-2">
-            Read more →
-         </span>
-      </div>
-     </a>
-   </div>    
+      <div className="invisible sm:block sm:w-1/2"/>
+    </div>   
   )
 }
 
@@ -47,7 +54,7 @@ export default function ProjectsPage() {
       <div className="space-y-4 text-center mb-12">
         <h1 className="text-4xl sm:text-5xl font-bold">
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan via-purple to-cyan">
-            Projekts
+            Projects
           </span>
         </h1>
         <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed px-4 sm:px-0">
@@ -55,14 +62,14 @@ export default function ProjectsPage() {
         </p>
       </div>
 
-      <div className="relative w-full max-w-3xl">
+      <div className="relative w-full max-w-6xl">
 
-        <div className="absolute left-1/2 top-0 bottom-0 w-2 bg-gray-600"/>
+        <div className="absolute left-1/2 top-0 bottom-0 w-2 -ml-1 bg-gray-600"/>
 
         <div className="flex flex-col space-y-8">
-          <ProjectItem title="server" description="coll stuff" href="/en/projects/server"/>
-          <ProjectItem title="server" description="coll stuff" href="/en/projects/server"/>
-          <ProjectItem title="server" description="coll stuff" href="/en/projects/server"/>
+          <ProjectItem title="server" description="coll stuff" href="/en/projects/server" isLeft={true} />
+          <ProjectItem title="server" description="coll stuff" href="/en/projects/server" isLeft={false} />
+          <ProjectItem title="server" description="coll stuff" href="/en/projects/server" isLeft={true} />
         </div>
 
       </div>

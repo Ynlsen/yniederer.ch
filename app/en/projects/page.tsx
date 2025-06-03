@@ -9,13 +9,17 @@ function ProjectItem({title, description, href, isLeft}: ItemPara) {
 
   const order = isLeft ? "order-first pr-8" : "order-last pl-8"
 
+  const buttonColor = isLeft ? "border-cyan text-cyan hover:bg-cyan hover:text-black" : "border-purple text-purple hover:bg-purple hover:text-black"
+
+  const borderColor = isLeft ? "border-cyan/30 hover:border-cyan/70" : "border-purple/30 hover:border-purple/70"
+
   return(
     <div className="flex w-full">
       <div className={`w-1/2 ${order}`}>
-        <a href={href} className="block w-full bg-gray-700 border-2 border-gray-500 rounded-2xl">
+        <a href={href} className={`block w-full bg-gray-600/60 border-2 ${borderColor} duration-300   rounded-2xl`}>
           <div className="relative w-full h-48 overflow-hidden">
             <img 
-              src="/avatar.jpg" 
+              src="/server.jpg" 
               alt={`${title} thumbnail`} 
               className="absolute w-full h-full object-cover rounded-t-2xl"
             />
@@ -24,7 +28,7 @@ function ProjectItem({title, description, href, isLeft}: ItemPara) {
           <div className="p-5">
             <h2 className="text-2xl font-semibold text-white mb-2">{title}</h2>
             <p className="text-gray-300 text-sm mb-3">{description}</p>
-            <span className="inline-block px-4 py-1.5 text-sm font-medium rounded-full border-2">
+            <span className={`inline-block px-4 py-1.5 text-sm font-medium rounded-full border-2 ${buttonColor} duration-300`}>
                 Read more →
             </span>
           </div>

@@ -128,6 +128,18 @@ export default function ContactPage() {
           sitekey={'6LeIX04rAAAAAKUDBk8kC0kUwKK7wh7uYTa6EaIU'} 
         />
 
+        {status === 'success' && (
+          <div className="w-full px-6 py-3 border-2 border-green-600 text-green-600 text-center rounded-lg">
+            Your message has been sent successfully!
+          </div>
+        )}
+
+        {status === 'error' && (
+          <div className="w-full px-6 py-3 border-2 border-red-600 text-red-600 text-center rounded-lg">
+            Something went wrong. Please try again.
+          </div>
+        )}
+
         <button type="submit" disabled={status === 'submitting'} className="w-full px-6 py-3 border-2 border-purple text-purple hover:bg-purple hover:text-black duration-300">Send Message</button>
       </form>
     </main>

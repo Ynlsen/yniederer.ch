@@ -8,13 +8,20 @@ function ProjectItem({title, description, href}: ItemPara) {
   return(
     <div className="w-full">
      <a href={href} className="block w-full bg-gray-700 border-2 border-gray-500 rounded-2xl">
-      <div className="w-full h-48 overflow-hidden">
-        <img src="/avatar.jpg" alt="TODO" className="w-full h-full object-cover rounded-t-2xl"/>
+      <div className="relative w-full h-48 overflow-hidden">
+        <img 
+          src="/avatar.jpg" 
+          alt={`${title} thumbnail`} 
+          className="absolute w-full h-full object-cover rounded-t-2xl"
+        />
+        <div className="absolute w-full h-full bg-gradient-to-t from-black/70 to-transparent"/>
       </div>
-      <div className="p-4 text-white">
-         <h2 className="text-2xl font-semibold mb-2">{title}</h2>
-         <p>{description}</p>
-         read more --
+      <div className="p-5">
+         <h2 className="text-2xl font-semibold text-white mb-2">{title}</h2>
+         <p className="text-gray-300 text-sm mb-3">{description}</p>
+         <span className="inline-block px-4 py-1.5 text-sm font-medium rounded-full border-2">
+            Read more →
+         </span>
       </div>
      </a>
    </div>    

@@ -89,7 +89,7 @@ export default function ProjectsPage() {
   ]
 
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center py-24">
+    <main className="min-h-screen flex flex-col items-center justify-center py-24 px-4">
 
       <div className="fixed -z-10 -top-1/4 -left-1/4 w-1/2 h-1/2 bg-cyan/10 rounded-full blur-[100px] animate-[pulse_10s_ease_infinite]"></div>
       <div className="fixed -z-10 -bottom-1/4 -right-1/4 w-1/2 h-1/2 bg-purple/10 rounded-full blur-[100px] animate-[pulse_10s_ease_infinite]"></div>
@@ -103,7 +103,7 @@ export default function ProjectsPage() {
           </span>
         </h1>
         <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed px-4 sm:px-0">
-          Scroll to discover.
+          Scroll down to explore the project cards for a quick overview. Click any of them to read the full article.
         </p>
       </div>
 

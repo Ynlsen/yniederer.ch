@@ -56,7 +56,8 @@ export default function ProjectsPage() {
       </div>
 
       <div className="relative w-full max-w-3xl">
-      
+
+        <div className="absolute left-1/2 top-0 bottom-0 w-2 bg-gray-600"/>
 
         <div className="flex flex-col space-y-8">
           <ProjectItem title="server" description="coll stuff" href="/en/projects/server"/>

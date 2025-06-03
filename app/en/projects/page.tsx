@@ -13,9 +13,12 @@ function ProjectItem({title, description, href, isLeft}: ItemPara) {
 
   const borderColor = isLeft ? "border-cyan/30 hover:border-cyan/70" : "border-purple/30 hover:border-purple/70"
 
+  const dotColor = isLeft ? "ring-cyan group-hover:bg-cyan" : "ring-purple group-hover:bg-purple"
+
   return(
-    <div className="flex w-full">
-      <div className={`w-1/2 ${order}`}>
+    <div className="relative flex w-full">
+      <div className={`group w-1/2 ${order}`}>
+        <div className={`absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-black ring-8  ${dotColor} group-hover:ring-0 group-hover:w-10 group-hover:h-10 duration-300 rounded-full`} />
         <a href={href} className={`block w-full bg-gray-600/60 border-2 ${borderColor} duration-300   rounded-2xl`}>
           <div className="relative w-full h-48 overflow-hidden">
             <img 
@@ -46,16 +49,14 @@ function ProjectItem({title, description, href, isLeft}: ItemPara) {
 
 export default function ProjectsPage() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center py-20">
+    <main className="min-h-screen flex flex-col items-center justify-center py-24">
 
       <div className="fixed -z-10 -top-1/4 -left-1/4 w-1/2 h-1/2 bg-cyan/10 rounded-full blur-[100px] animate-[pulse_10s_ease_infinite]"></div>
       <div className="fixed -z-10 -bottom-1/4 -right-1/4 w-1/2 h-1/2 bg-purple/10 rounded-full blur-[100px] animate-[pulse_10s_ease_infinite]"></div>
       
-      <div className="fixed -z-10 w-1/2 h-1/3 bg-gradient-to-r from-cyan via-purple to-cyan opacity-10 rounded-full blur-[100px]"></div>
-
       <div className="fixed -z-10 inset-0 bg-gradient-to-br from-cyan/5 via-transparent to-purple/5"></div>
       
-      <div className="space-y-4 text-center mb-12">
+      <div className="space-y-4 text-center">
         <h1 className="text-4xl sm:text-5xl font-bold">
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan via-purple to-cyan">
             Projects
@@ -68,9 +69,10 @@ export default function ProjectsPage() {
 
       <div className="relative w-full max-w-6xl">
 
-        <div className="absolute left-1/2 top-0 bottom-0 w-2 -ml-1 bg-gray-600"/>
+        <div className="absolute left-1/2 top-0 bottom-9/10 w-2 -ml-1 bg-gradient-to-b from-transparent to-gray-600/50"/>
+        <div className="absolute left-1/2 top-1/10 bottom-0 w-2 -ml-1 bg-gray-600/50"/>
 
-        <div className="flex flex-col space-y-8">
+        <div className="flex flex-col space-y-8 pt-20">
           <ProjectItem title="server" description="coll stuff" href="/en/projects/server" isLeft={true} />
           <ProjectItem title="server" description="coll stuff" href="/en/projects/server" isLeft={false} />
           <ProjectItem title="server" description="coll stuff" href="/en/projects/server" isLeft={true} />

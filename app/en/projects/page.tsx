@@ -43,11 +43,6 @@ function ProjectItem({title, description, href, thumbnail, isLeft}: ItemPara) {
   )
 }
 
-
-
-
-
-
 export default function ProjectsPage() {
   // temporary AI generated place holder project for testing
   const Projects: any[] = [
@@ -93,7 +88,6 @@ export default function ProjectsPage() {
 
       <div className="fixed -z-10 -top-1/4 -left-1/4 w-1/2 h-1/2 bg-cyan/10 rounded-full blur-[100px] animate-[pulse_10s_ease_infinite]"></div>
       <div className="fixed -z-10 -bottom-1/4 -right-1/4 w-1/2 h-1/2 bg-purple/10 rounded-full blur-[100px] animate-[pulse_10s_ease_infinite]"></div>
-      
       <div className="fixed -z-10 inset-0 bg-gradient-to-br from-cyan/5 via-transparent to-purple/5"></div>
       
       <div className="space-y-4 text-center">
@@ -113,7 +107,6 @@ export default function ProjectsPage() {
         <div className="absolute left-1/2 top-1/10 bottom-0 w-2 -ml-1 bg-gray-600/50"/>
 
         <div className="flex flex-col space-y-8 pt-20">
-
           {Projects.map((project, index) =>(
             <ProjectItem key={project.href} {...project} isLeft={index % 2 == 0}/>
           ))}
@@ -132,9 +125,7 @@ export default function ProjectsPage() {
               </a>
             </div>  
           </div>
-        
         </div>
-
       </div>
     </main>
   );

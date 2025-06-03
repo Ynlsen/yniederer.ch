@@ -1,11 +1,12 @@
 type ItemPara = {
   title: string
   description: string
+  thumbnail: string
   href: string
   isLeft: boolean
 }
 
-function ProjectItem({title, description, href, isLeft}: ItemPara) {
+function ProjectItem({title, description, href, thumbnail, isLeft}: ItemPara) {
 
   const order = isLeft ? "order-first pr-8" : "order-last pl-8"
 
@@ -22,7 +23,7 @@ function ProjectItem({title, description, href, isLeft}: ItemPara) {
         <a href={href} className={`block w-full bg-gray-800/80 border-2 ${borderColor} duration-300   rounded-2xl`}>
           <div className="relative w-full h-48 overflow-hidden">
             <img 
-              src="/server.jpg" 
+              src={thumbnail} 
               alt={`${title} thumbnail`} 
               className="absolute w-full h-full object-cover rounded-t-2xl"
             />
@@ -48,6 +49,45 @@ function ProjectItem({title, description, href, isLeft}: ItemPara) {
 
 
 export default function ProjectsPage() {
+  // temporary AI generated place holder project for testing
+  const Projects: any[] = [
+    {
+      title: "Homelab Deep Dive: Setup & Architecture",
+      description:
+        "How I turned my old desktop into a Proxmox server to host multiple VMs & Docker services – including network configuration and automatic updates.",
+      thumbnail: "/homelab-thumbnail.jpg",
+      href: "/en/projects/homelab-deep-dive",
+    },
+    {
+      title: "Production Ubuntu Server: Setup & CI/CD",
+      description:
+        "Why I chose Ubuntu 22.04 LTS as a base, how I installed Nginx & Docker, and configured GitLab CI/CD for deployments.",
+      thumbnail: "/ubuntu-server.jpg",
+      href: "/en/projects/ubuntu-server-setup",
+    },
+    {
+      title: "Ansible Automation: My First Playbook",
+      description:
+        "How I used Ansible to centrally configure all my home servers and automate software updates.",
+      thumbnail: "/ansible-playbook.jpg",
+      href: "/en/projects/ansible-automation",
+    },
+    {
+      title: "Nextcloud Self-Hosting: Data Security & Backups",
+      description:
+        "A guide on how I set up Nextcloud, enabled encryption, and sent regular backups to the cloud via Rclone.",
+      thumbnail: "/nextcloud.jpg",
+      href: "/en/projects/nextcloud-self-hosting",
+    },
+    {
+      title: "Pi-Hole & DNS Filtering: Optimizing Privacy",
+      description:
+        "How I integrated Pi-Hole into my network to block ads and trackers – including configuring network policies on the router.",
+      thumbnail: "/pihole.jpg",
+      href: "/en/projects/pihole-dns-filtering",
+    },
+  ]
+
   return (
     <main className="min-h-screen flex flex-col items-center justify-center py-24">
 
@@ -73,10 +113,11 @@ export default function ProjectsPage() {
         <div className="absolute left-1/2 top-1/10 bottom-0 w-2 -ml-1 bg-gray-600/50"/>
 
         <div className="flex flex-col space-y-8 pt-20">
-          <ProjectItem title="server" description="coll stuff" href="/en/projects/server" isLeft={true} />
-          <ProjectItem title="server" description="coll stuff" href="/en/projects/server" isLeft={false} />
-          <ProjectItem title="server" description="coll stuff" href="/en/projects/server" isLeft={true} />
-        
+
+          {Projects.map((project, index) =>(
+            <ProjectItem key={project.href} {...project} isLeft={index % 2 == 0}/>
+          ))}
+
           <div className="relative w-full flex justify-center pt-10">
             <div className="max-w-md w-1/2 bg-gray-800/80 backdrop-blur-3xl border-2 border-gray-600/50 rounded-2xl p-6 text-center">
               <p className="text-gray-300 mb-4">

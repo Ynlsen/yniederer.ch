@@ -1,12 +1,16 @@
+type ItemPara = {
+  title: string
+  description: string
+  href: string
+}
 
-
-function ProjectItem() {
+function ProjectItem({title, description, href}: ItemPara) {
   return(
     <div className="w-full">
-     <a href="en/projects/server" className="block w-full bg-gray-700 border-2 border-gray-500 rounded-2xl">
+     <a href={href} className="block w-full bg-gray-700 border-2 border-gray-500 rounded-2xl">
        <div className="p-4 text-white">
-         <h2 className="text-2xl font-semibold mb-2">Server</h2>
-         <p>My home server hosting a lot of cool stuff</p>
+         <h2 className="text-2xl font-semibold mb-2">{title}</h2>
+         <p>{description}</p>
          read more --
        </div>
      </a>
@@ -45,9 +49,9 @@ export default function ProjectsPage() {
       
 
         <div className="flex flex-col space-y-8">
-          <ProjectItem/>
-          <ProjectItem/>
-          <ProjectItem/>
+          <ProjectItem title="server" description="coll stuff" href="/en/projects/server"/>
+          <ProjectItem title="server" description="coll stuff" href="/en/projects/server"/>
+          <ProjectItem title="server" description="coll stuff" href="/en/projects/server"/>
         </div>
 
       </div>

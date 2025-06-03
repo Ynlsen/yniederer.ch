@@ -128,7 +128,19 @@ export default function DeContactPage() {
           sitekey={'6LeIX04rAAAAAKUDBk8kC0kUwKK7wh7uYTa6EaIU'} 
         />
 
-        <button type="submit" disabled={status === 'submitting'} className="w-full px-6 py-3 border-2 border-purple text-purple hover:bg-purple hover:text-black duration-300">Nachricht senden</button>
+        {status === 'success' && (
+          <div className="w-full px-6 py-3 border-2 border-green-600 text-green-600 text-center rounded-lg">
+            Deine Nachricht wurde erfolgreich gesendet!
+          </div>
+        )}
+
+        {status === 'error' && (
+          <div className="w-full px-6 py-3 border-2 border-red-600 text-red-600 text-center rounded-lg">
+            Etwas ist schiefgegangen. Bitte versuche es erneut.
+          </div>
+        )}
+
+        <button type="submit" disabled={status === 'submitting'} className="w-full px-6 py-3 border-2 border-purple text-purple hover:bg-purple hover:text-black duration-300">{status === 'submitting' ? 'Nachricht wird gesendet...' : 'Nachricht senden'}</button>
       </form>
     </main>
   );

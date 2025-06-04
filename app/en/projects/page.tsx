@@ -8,7 +8,7 @@ type ItemPara = {
 
 function ProjectItem({title, description, href, thumbnail, isLeft}: ItemPara) {
 
-  const order = isLeft ? "order-first pr-8" : "order-last pl-8"
+  const order = isLeft ? "sm:order-first sm:pr-8" : "sm:order-last sm:pl-8"
 
   const buttonColor = isLeft ? "border-cyan text-cyan hover:bg-cyan hover:text-black" : "border-purple text-purple hover:bg-purple hover:text-black"
 
@@ -18,9 +18,9 @@ function ProjectItem({title, description, href, thumbnail, isLeft}: ItemPara) {
 
   return(
     <div className="relative flex w-full">
-      <div className={`group w-1/2 ${order}`}>
-        <div className={`absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-black ring-8  ${dotColor} group-hover:ring-0 group-hover:w-10 group-hover:h-10 duration-300 rounded-full`} />
-        <a href={href} className={`block w-full bg-gray-800/80 border-2 ${borderColor} duration-300   rounded-2xl`}>
+      <div className={`group w-full sm:w-1/2 ${order}`}>
+        <div className={`absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-black ring-8 hidden sm:block ${dotColor} group-hover:ring-0 group-hover:w-10 group-hover:h-10 duration-300 rounded-full`} />
+        <a href={href} className={`block w-full bg-gray-800/80 border-2 ${borderColor} duration-300 rounded-2xl`}>
           <div className="relative w-full h-48 overflow-hidden">
             <img 
               src={thumbnail} 
@@ -107,16 +107,16 @@ export default function ProjectsPage() {
 
       <div className="relative w-full max-w-6xl">
 
-        <div className="absolute left-1/2 top-0 bottom-9/10 w-2 -ml-1 bg-gradient-to-b from-transparent to-gray-600/50"/>
-        <div className="absolute left-1/2 top-1/10 bottom-0 w-2 -ml-1 bg-gray-600/50"/>
+        <div className="absolute left-1/2 top-0 bottom-9/10 w-2 -ml-1 bg-gradient-to-b from-transparent to-gray-600/50 hidden sm:block"/>
+        <div className="absolute left-1/2 top-1/10 bottom-0 w-2 -ml-1 bg-gray-600/50 hidden sm:block"/>
 
-        <div className="flex flex-col space-y-8 pt-20">
+        <div className="flex flex-col space-y-8 pt-10 sm:pt-20">
           {Projects.map((project, index) =>(
             <ProjectItem key={project.href} {...project} isLeft={index % 2 == 0}/>
           ))}
 
-          <div className="relative w-full flex justify-center pt-10">
-            <div className="max-w-md w-1/2 bg-gray-800/80 backdrop-blur-3xl border-2 border-gray-600/50 rounded-2xl p-6 text-center">
+          <div className="relative w-full flex justify-center sm:pt-8">
+            <div className="w-full sm:max-w-md sm:w-1/2 bg-gray-800/80 backdrop-blur-3xl border-2 border-gray-600/50 rounded-2xl p-6 text-center">
               <p className="text-gray-300 mb-4">
                 More projects coming soon... <br/>
                 For now, check out my GitHub for more repos:

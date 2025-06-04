@@ -83,6 +83,10 @@ export default function ProjectsPage() {
     },
   ]
 
+  const projectCountEven = Projects.length % 2 === 0
+
+  const gitHubColor = projectCountEven ? "border-cyan text-cyan hover:bg-cyan" : "border-purple text-purple hover:bg-purple"
+
   return (
     <main className="min-h-screen flex flex-col items-center justify-center py-24 px-4">
 
@@ -119,7 +123,7 @@ export default function ProjectsPage() {
               </p>
               <a
                 href="https://github.com/Ynlsen"
-                className="inline-block px-6 py-2.25 border-2 text-sm font-medium rounded-full border-purple text-purple hover:bg-purple hover:text-black duration-300"
+                className={`inline-block px-6 py-2.25 border-2 text-sm font-medium rounded-full ${gitHubColor} hover:text-black duration-300`}
               >
                 To my GitHub →
               </a>

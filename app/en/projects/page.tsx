@@ -49,7 +49,7 @@ export default function ProjectsPage() {
     {
       title: "Homelab Deep Dive: Setup & Architecture",
       description:
-        "How I turned my old desktop into a Proxmox server to host multiple VMs & Docker services – including network configuration and automatic updates.",
+        "How I turned my old desktop into a Proxmox server to host multiple VMs & Docker services - including network configuration and automatic updates.",
       thumbnail: "/homelab-thumbnail.jpg",
       href: "/en/projects/homelab-deep-dive",
     },
@@ -77,7 +77,7 @@ export default function ProjectsPage() {
     {
       title: "Pi-Hole & DNS Filtering: Optimizing Privacy",
       description:
-        "How I integrated Pi-Hole into my network to block ads and trackers – including configuring network policies on the router.",
+        "How I integrated Pi-Hole into my network to block ads and trackers - including configuring network policies on the router.",
       thumbnail: "/pihole.jpg",
       href: "/en/projects/pihole-dns-filtering",
     },

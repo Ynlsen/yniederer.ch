@@ -47,11 +47,11 @@ export default function ProjectsPage() {
   // temporary AI generated place holder project for testing
   const Projects: any[] = [
     {
-      title: "Homelab Deep Dive: Setup & Architecture",
+      title: "Self Hosted Proxmox Homelab Server",
       description:
-        "How I turned my old desktop into a Proxmox server to host multiple VMs & Docker services - including network configuration and automatic updates.",
-      thumbnail: "/homelab-thumbnail.jpg",
-      href: "/en/projects/homelab-deep-dive",
+        "An upgraded HP tower running Proxmox as the hypervisor for multiple VMs. With a docker based main VM hosting personal sites, Nextcloud, Immich, Jellyfin, and Traefik. Plus separate Android emulator and backup VMs.",
+      thumbnail: "/server.jpg",
+      href: "/en/projects/server",
     },
     {
       title: "Production Ubuntu Server: Setup & CI/CD",

@@ -44,7 +44,6 @@ function ProjectItem({title, description, href, thumbnail, isLeft}: ItemPara) {
 }
 
 export default function ProjectsPage() {
-  // temporary AI generated place holder project for testing
   const Projects: any[] = [
     {
       title: "Self Hosted Proxmox Homelab Server",
@@ -52,34 +51,6 @@ export default function ProjectsPage() {
         "An upgraded HP tower running Proxmox as the hypervisor for multiple VMs. With a docker based main VM hosting personal sites, Nextcloud, Immich, Jellyfin, and Traefik. Plus separate Android emulator and backup VMs.",
       thumbnail: "/server.jpg",
       href: "/en/projects/server",
-    },
-    {
-      title: "Production Ubuntu Server: Setup & CI/CD",
-      description:
-        "Why I chose Ubuntu 22.04 LTS as a base, how I installed Nginx & Docker, and configured GitLab CI/CD for deployments.",
-      thumbnail: "/ubuntu-server.jpg",
-      href: "/en/projects/ubuntu-server-setup",
-    },
-    {
-      title: "Ansible Automation: My First Playbook",
-      description:
-        "How I used Ansible to centrally configure all my home servers and automate software updates.",
-      thumbnail: "/ansible-playbook.jpg",
-      href: "/en/projects/ansible-automation",
-    },
-    {
-      title: "Nextcloud Self-Hosting: Data Security & Backups",
-      description:
-        "A guide on how I set up Nextcloud, enabled encryption, and sent regular backups to the cloud via Rclone.",
-      thumbnail: "/nextcloud.jpg",
-      href: "/en/projects/nextcloud-self-hosting",
-    },
-    {
-      title: "Pi-Hole & DNS Filtering: Optimizing Privacy",
-      description:
-        "How I integrated Pi-Hole into my network to block ads and trackers - including configuring network policies on the router.",
-      thumbnail: "/pihole.jpg",
-      href: "/en/projects/pihole-dns-filtering",
     },
   ]
 

@@ -1,2 +1,2 @@
 # yniederer.ch
-My own website [currently a placeholder]
+My own website

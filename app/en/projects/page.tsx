@@ -52,6 +52,13 @@ export default function ProjectsPage() {
       thumbnail: "/server.jpg",
       href: "/en/projects/server",
     },
+    {
+      title: "Tectonic Planet Generator",
+      description:
+        "A Godot C# tool that generates 3D planets with simulated tectonic plates and visualizes stress along plate boundaries.",
+      thumbnail: "/tectonic-planet-generator.jpg",
+      href: "/en/projects/tectonic-planet-generator",
+    },
   ]
 
   const projectCountEven = Projects.length % 2 === 0

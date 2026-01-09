@@ -1,4 +1,45 @@
+"use client";
+
+import { useRef } from "react";
+import { setTheme, themes } from "@/lib/theme";
+
 export default function HomePage() {
+  const randomizeTheme = () => {
+    const currentTheme = sessionStorage.getItem("theme");
+    let newTheme;
+
+    do {
+      newTheme = themes[Math.floor(Math.random() * themes.length)];
+    } while (newTheme === currentTheme);
+
+    setTheme(newTheme);
+  };
+
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+
+  const handleMouseEnter = () => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+    intervalRef.current = setInterval(randomizeTheme, 1500);
+  };
+
+  const handleMouseLeave = () => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
+  };
+
+  const handelClick = () => {
+    randomizeTheme();
+    
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+    intervalRef.current = setInterval(randomizeTheme, 1500);
+  };
+
   return (
     <main className="min-h-screen flex flex-col items-center justify-center pt-20 sm:pt-0">
 
@@ -9,7 +50,12 @@ export default function HomePage() {
 
       <div className="fixed -z-10 inset-0 bg-gradient-to-br from-cyan/5 via-transparent to-purple/5"></div>
 
-      <div className="group relative w-56 h-56 sm:w-64 sm:h-64 mb-8 sm:mb-12 mt-4">
+      <button
+        onClick={handelClick}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        className="group relative w-56 h-56 sm:w-64 sm:h-64 mb-8 sm:mb-12 mt-4 active:scale-95"
+      >
         <div className="absolute -inset-3 group-hover:scale-110 transition-all duration-200 ease-in-out bg-gradient-to-r from-cyan via-purple to-cyan opacity-30 rounded-full blur animate-pulse group-hover:animate-[pulse_1.5s_infinite]"></div>
         <div className="absolute -inset-0.5 group-hover:-inset-0.3 bg-gradient-to-r from-cyan via-purple to-cyan opacity-50 group-hover:scale-105 transition-all duration-200 ease-in-out rounded-full"></div>
         <img
@@ -17,7 +63,7 @@ export default function HomePage() {
           alt="Yannick Niederer"
           className="relative w-full h-full group-hover:scale-105 transition-all duration-200 ease-in-out rounded-full"
         />
-      </div>
+      </button>
 
       <div className="space-y-4 sm:space-y-6 text-center">
         <h1 className="text-4xl sm:text-5xl font-bold">

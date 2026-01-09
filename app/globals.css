@@ -21,3 +21,38 @@
         }  
     }
 }
+
+.theme-1 {
+  --color-cyan: var(--color-cyan-400);
+  --color-cyanL: var(--color-cyan-200);
+  --color-purple: var(--color-purple-500);
+  --color-purpleL: var(--color-purple-300);
+}
+
+.theme-2 {
+  --color-cyan: var(--color-amber-400);
+  --color-cyanL: var(--color-amber-200);
+  --color-purple: var(--color-red-600);
+  --color-purpleL: var(--color-red-300);
+}
+
+.theme-3 {
+  --color-cyan: var(--color-sky-400);
+  --color-cyanL: var(--color-sky-200);
+  --color-purple: var(--color-indigo-600);
+  --color-purpleL: var(--color-indigo-300);
+}
+
+.theme-4 {
+  --color-cyan: var(--color-emerald-400);
+  --color-cyanL: var(--color-emerald-200);
+  --color-purple: var(--color-blue-600);
+  --color-purpleL: var(--color-blue-300);
+}
+
+.theme-5 {
+  --color-cyan: var(--color-lime-400);
+  --color-cyanL: var(--color-lime-200);
+  --color-purple: var(--color-teal-600);
+  --color-purpleL: var(--color-teal-300);
+}

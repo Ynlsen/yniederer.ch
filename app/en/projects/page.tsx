@@ -48,9 +48,9 @@ function ProjectItem({ title, description, href, thumbnail, isLeft }: ItemPara) 
 export default function ProjectsPage() {
   const Projects: any[] = [
     {
-      title: "Self Hosted Proxmox Homelab Server",
+      title: "Self Hosted Homelab Server",
       description:
-        "An upgraded HP tower running Proxmox as the hypervisor for multiple VMs. With a docker based main VM hosting personal sites, Nextcloud, Immich, Jellyfin, and Traefik. Plus separate Android emulator and backup VMs.",
+        "An upgraded HP tower running Proxmox as the hypervisor for multiple VMs. With a Docker-based main VM hosting personal sites, Nextcloud, Immich, Vaultwarden, and Traefik. Plus separate Android emulator and backup VMs.",
       thumbnail: "/server.jpg",
       href: "/en/projects/server",
     },

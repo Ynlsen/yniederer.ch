@@ -48,9 +48,9 @@ function ProjectItem({ title, description, href, thumbnail, isLeft }: ItemPara) 
 export default function DeProjectsPage() {
   const Projects: any[] = [
     {
-      title: "Selbstgehosteter Proxmox Homelab Server",
+      title: "Selbstgehosteter Homelab Server",
       description:
-        "Ein aufgerüsteter HP Tower, auf dem Proxmox als Hypervisor für mehrere VMs läuft. Mit einer docker basierten haupt VM, die persönliche Webseiten, Nextcloud, Immich, Jellyfin und Traefik hostet. Ausserdem separate Android Emulator und Backup VMs.",
+        "Ein aufgerüsteter HP Tower, auf dem Proxmox als Hypervisor für mehrere VMs läuft. Mit einer Docker-basierten Haupt-VM, die persönliche Webseiten, Nextcloud, Immich, Vaultwarden und Traefik hostet. Ausserdem separate Android-Emulator und Backup-VMs.",
       thumbnail: "/server.jpg",
       href: "/de/projects/server",
     },

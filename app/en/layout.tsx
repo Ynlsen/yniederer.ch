@@ -5,6 +5,7 @@ import "../globals.css";
 //english metadata
 export async function generateMetadata(): Promise<Metadata> {
   return {
+    metadataBase: new URL("https://yniederer.ch"),
     title: "Yannick Niederer - Website & Portfolio",
     description: "Portfolio and projects of Yannick Niederer, a Computer Science bachelor student at ETH Zurich.",
     keywords: [
@@ -19,6 +20,22 @@ export async function generateMetadata(): Promise<Metadata> {
       "software development",
     ],
     authors: [{ name: "Yannick Niederer", url: "https://yniederer.ch" }],
+    openGraph: {
+      title: "Yannick Niederer - Website & Portfolio",
+      description: "Portfolio and projects of Yannick Niederer, a Computer Science bachelor student at ETH Zurich.",
+      url: "https://yniederer.ch/en",
+      siteName: "Yannick Niederer",
+      images: [
+        {
+          url: "/avatar.jpg",
+          width: 1024,
+          height: 1024,
+          alt: "Yannick Niederer",
+        },
+      ],
+      locale: "en_US",
+      type: "website",
+    },
   };
 }
 
@@ -34,11 +51,11 @@ const Schema = {
       image: "https://yniederer.ch/avatar.jpg",
       description: [
         { "@value": "Computer Science bachelor student at ETH Zurich", "@language": "en" },
-        { "@value": "Bachelorstudent der Informatik an der ETH Zürich",  "@language": "de" }
+        { "@value": "Bachelorstudent der Informatik an der ETH Zürich", "@language": "de" }
       ],
       jobTitle: [
         { "@value": "Bachelor Student", "@language": "en" },
-        { "@value": "Bachelorstudent",  "@language": "de" }
+        { "@value": "Bachelorstudent", "@language": "de" }
       ],
       email: "mailto:yannick.niederer@shinternet.ch",
       url: "https://yniederer.ch",
@@ -59,7 +76,7 @@ const Schema = {
         name: "ETH Zurich",
         url: "https://ethz.ch"
       },
-      knowsLanguage: ["de","en","de-CH"]
+      knowsLanguage: ["de", "en", "de-CH"]
     },
     {
       "@type": "WebSite",

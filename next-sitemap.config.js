@@ -1,5 +1,5 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl:'https://yniederer.ch',
-  generateRobotsTxt: true
-}
+  siteUrl: 'https://yniederer.ch',
+  generateRobotsTxt: true,
+};

@@ -1,3 +1,26 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Yannick Niederer - Projects",
+  description: "Projects portfolio of Yannick Niederer.",
+  authors: [{ name: "Yannick Niederer", url: "https://yniederer.ch" }],
+  alternates: {
+    canonical: "https://yniederer.ch/en/projects",
+    languages: {
+      en: "https://yniederer.ch/en/projects",
+      de: "https://yniederer.ch/de/projects",
+    },
+  },
+  openGraph: {
+    title: "Yannick Niederer - Projects",
+    description: "Projects portfolio of Yannick Niederer.",
+    url: "https://yniederer.ch/en/projects",
+    siteName: "Yannick Niederer",
+    locale: "en_US",
+    type: "website",
+  },
+};
+
 type ItemPara = {
   title: string
   description: string

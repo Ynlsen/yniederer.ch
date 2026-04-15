@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
 import { setTheme, themes } from "@/lib/theme";
 
 export default function DeHomePage() {
@@ -33,7 +34,7 @@ export default function DeHomePage() {
 
   const handelClick = () => {
     randomizeTheme();
-    
+
     if (intervalRef.current) {
       clearInterval(intervalRef.current);
     }
@@ -45,7 +46,7 @@ export default function DeHomePage() {
 
       <div className="fixed -z-10 -top-1/4 -left-1/4 w-1/2 h-1/2 bg-cyan/10 rounded-full blur-[100px] animate-[pulse_10s_ease_infinite]"></div>
       <div className="fixed -z-10 -bottom-1/4 -right-1/4 w-1/2 h-1/2 bg-purple/10 rounded-full blur-[100px] animate-[pulse_10s_ease_infinite]"></div>
-      
+
       <div className="fixed -z-10 w-1/2 h-1/3 bg-gradient-to-r from-cyan via-purple to-cyan opacity-10 rounded-full blur-[100px]"></div>
 
       <div className="fixed -z-10 inset-0 bg-gradient-to-br from-cyan/5 via-transparent to-purple/5"></div>
@@ -59,10 +60,13 @@ export default function DeHomePage() {
       >
         <div className="absolute -inset-3 group-hover:scale-110 transition-all duration-200 ease-in-out bg-gradient-to-r from-cyan via-purple to-cyan opacity-30 rounded-full blur animate-pulse group-hover:animate-[pulse_1.5s_infinite]"></div>
         <div className="absolute -inset-0.5 group-hover:-inset-0.3 bg-gradient-to-r from-cyan via-purple to-cyan opacity-50 group-hover:scale-105 transition-all duration-200 ease-in-out rounded-full"></div>
-        <img
-          src="/avatar.jpg"
+        <Image
+          src="/YannickNiederer.png"
           alt="Yannick Niederer"
-          className="relative w-full h-full group-hover:scale-105 transition-all duration-200 ease-in-out rounded-full"
+          fill
+          unoptimized
+          className="relative object-cover [object-position:center_45%] group-hover:scale-105 transition-all duration-200 ease-in-out rounded-full"
+          priority
         />
       </button>
 
@@ -73,7 +77,7 @@ export default function DeHomePage() {
           </span>
         </h1>
         <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed px-4 sm:px-0">
-          Hallo, ich bin <span className="inline-block text-cyan hover:animate-wiggle">Yannick</span>, ein Informatik-Bachelorstudent an der ETH Zürich. 
+          Hallo, ich bin <span className="inline-block text-cyan hover:animate-wiggle">Yannick</span>, ein Informatik-Bachelorstudent an der ETH Zürich.
           Hier findest du einige meiner Projekte.
           Kontaktiere mich gerne über die Kontaktseite.
         </p>

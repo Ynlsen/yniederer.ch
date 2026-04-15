@@ -27,9 +27,9 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: "Yannick Niederer",
       images: [
         {
-          url: "/avatar.jpg",
-          width: 1024,
-          height: 1024,
+          url: "/YannickNiederer.png",
+          width: 3024,
+          height: 4032,
           alt: "Yannick Niederer",
         },
       ],
@@ -48,7 +48,18 @@ const Schema = {
       name: "Yannick Niederer",
       givenName: "Yannick",
       familyName: "Niederer",
-      image: "https://yniederer.ch/avatar.jpg",
+      image: {
+        "@type": "ImageObject",
+        "@id": "https://yniederer.ch/YannickNiederer.png",
+        url: "https://yniederer.ch/YannickNiederer.png",
+        contentUrl: "https://yniederer.ch/YannickNiederer.png",
+        width: 3024,
+        height: 4032,
+        encodingFormat: "image/png",
+        name: "Yannick Niederer",
+        caption: "Yannick Niederer",
+        representativeOfPage: true,
+      },
       description: [
         { "@value": "Computer Science bachelor student at ETH Zurich", "@language": "en" },
         { "@value": "Bachelorstudent der Informatik an der ETH Zürich", "@language": "de" }

@@ -16,6 +16,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   try {
     const post = await getPostBySlug(slug, "en");
     return {
+      metadataBase: new URL("https://yniederer.ch"),
       title: `${post.title} - Yannick Niederer`,
       description: post.description,
       authors: [{ name: "Yannick Niederer", url: "https://yniederer.ch" }],

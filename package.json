@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
-    "next": "^15.5.15",
+    "next": "^15.5.18",
     "next-sitemap": "^4.2.3",
     "picomatch": "^4.0.4",
     "react": "^19.0.0",

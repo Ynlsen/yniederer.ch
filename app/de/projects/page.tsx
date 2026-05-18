@@ -56,7 +56,7 @@ function ProjectItem({ title, description, href, thumbnail, isLeft }: ItemPara) 
           )}
           <div className="p-5">
             <h2 className="text-2xl font-semibold text-white mb-2">{title}</h2>
-            <p className="text-gray-300 text-sm mb-3">{description}</p>
+            <p className="text-gray-300 text-sm mb-3 whitespace-pre-line">{description}</p>
             <span className={`inline-block px-4 py-1.5 text-sm font-medium rounded-full border-2 ${buttonColor} duration-300`}>
               Mehr lesen →
             </span>
@@ -83,6 +83,11 @@ export default function DeProjectsPage() {
         "Ein Godot C# Tool, das 3D Planeten mit simulierten tektonischen Platten erzeugt und Spannungen entlang der Plattengrenzen visualisiert.",
       thumbnail: "/tectonic-planet-generator.jpg",
       href: "https://github.com/Ynlsen/tectonicPlanetGenerator", // Temporally added repo link until full blog is available
+    },
+    {
+      title: "Ahtrieb Engine",
+      description: "C++ Game Engine\nComing soon...",
+      href: "https://ahtrieb.ch/",
     },
   ]
 

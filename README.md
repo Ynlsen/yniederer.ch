@@ -1,4 +1,4 @@
-# yniederer.ch
+# [yniederer.ch](https://yniederer.ch)
 
 This repository contains the source code for my portfolio website. The site is available in both English and German, presents my projects and contact information, and features an animated and responsive design.
 
